@@ -32,7 +32,7 @@ checkButton.addEventListener("click", function () {
   if (score > 1) {
     currentNumber = Number(getValue(".input"));
     if (!currentNumber) {
-      setText(".instructions", "Not a number.....");
+      setText(".instructions", "❌ Not a number.....");
     } else if (currentNumber === randomNumber) {
       setText(".instructions", "✨ Hurray you've crack the code.....");
       selectElement("body").style.backgroundColor = "#4CAF50";
@@ -58,8 +58,9 @@ const resetButton = selectElement('.reset');
 resetButton.addEventListener("click", function () {
     if(score > highscore){
         highscore = score;
-        setText(".highscore", highscore);
+       
     }
+    setText(".highscore", highscore);
     randomNumber = Math.trunc(Math.random() * 20);
     console.log(randomNumber);
     setText(".instructions", "🎯 Start guessing.....");

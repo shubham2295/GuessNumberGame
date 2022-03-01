@@ -4,8 +4,7 @@ body {
   color: white;
   font-family: VT323;
   margin: 10px 0 0 0;
-  font-size: 1.8rem;
-
+  /*font-size: 1.8rem;*/
 }
 
 button {
@@ -14,7 +13,11 @@ button {
   border: none;
   border-radius: 2rem;
   padding: 1em 3rem;
-  font-size: 20px;
+  font-size: 1rem;
+}
+
+p{
+  font-size: 2rem;
 }
 
 h1 {
@@ -88,9 +91,10 @@ input::-webkit-inner-spin-button {
   margin-top: 0;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px) {
  .content{
-   margin: -50px 35px;
+   margin: 0 0 0 0;
+   text-align: center;
  }
   .instructions{
     margin: 0;
