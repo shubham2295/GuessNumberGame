@@ -87,3 +87,25 @@ input::-webkit-inner-spin-button {
   margin-bottom: 100px;
   margin-top: 0;
 }
+
+@media only screen and (max-width: 425px) {
+ .content{
+   margin: -50px 35px;
+ }
+  .instructions{
+    margin: 0;
+  }
+  .left{
+    float: none;
+  }
+  .right{
+    float: none;
+  }
+  .header-text{
+    float: none;
+    margin: 20px 0;
+  }
+  .main{
+    text-align: center;
+  }
+}
