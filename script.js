@@ -36,38 +36,38 @@ checkButton.addEventListener("click", function () {
     } else if (currentNumber === randomNumber) {
       setText(".instructions", "✨ Hurray you've crack the code.....");
       selectElement("body").style.backgroundColor = "#4CAF50";
-      if(score > highscore){
+      if (score > highscore) {
         highscore = score;
       }
       setText(".highscore", highscore);
       setText(".box", randomNumber);
     } else if (currentNumber !== randomNumber) {
-      setText(".instructions", currentNumber > randomNumber ? "📈 Too high....." : "📉 Too low.....");
+      setText(
+        ".instructions",
+        currentNumber > randomNumber ? "📈 Too high....." : "📉 Too low....."
+      );
       score--;
-      setText(".score" ,score);
+      setText(".score", score);
     }
-  }
-  else{
+  } else {
     setText(".instructions", "😕 You lost it.....");
-    setText(".score" , 0);
+    setText(".score", 0);
   }
 });
 
 //reset the game
-const resetButton = selectElement('.reset');
+const resetButton = selectElement(".reset");
 resetButton.addEventListener("click", function () {
-    if(score > highscore){
-        highscore = score;
-       
-    }
-    setText(".highscore", highscore);
-    randomNumber = Math.trunc(Math.random() * 20);
-    console.log(randomNumber);
-    setText(".instructions", "🎯 Start guessing.....");
-    score = 20;
-    setText(".score" , score);
-    selectElement("body").style.backgroundColor = "black";
-    setText(".box", "?");
-    selectElement(".input").value = "";
-    
+  if (score > highscore) {
+    highscore = score;
+  }
+  setText(".highscore", highscore);
+  randomNumber = Math.trunc(Math.random() * 20);
+  console.log(randomNumber);
+  setText(".instructions", "🎯 Start guessing.....");
+  score = 20;
+  setText(".score", score);
+  selectElement("body").style.backgroundColor = "black";
+  setText(".box", "?");
+  selectElement(".input").value = "";
 });
